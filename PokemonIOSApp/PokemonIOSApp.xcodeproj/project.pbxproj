@@ -66,6 +66,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		D25CFF802A5C52E2003DDB39 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				D2E2737A2A5C486E00AE5E8D /* Assets.xcassets */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
 		D2E273652A5C486D00AE5E8D = {
 			isa = PBXGroup;
 			children = (
@@ -86,13 +94,13 @@
 			isa = PBXGroup;
 			children = (
 				D2E273712A5C486D00AE5E8D /* AppDelegate.swift */,
+				D25CFF802A5C52E2003DDB39 /* Resource */,
 				D25CFF7F2A5C5032003DDB39 /* View */,
 				D25CFF7E2A5C5020003DDB39 /* Model */,
 				D25CFF7D2A5C500E003DDB39 /* Utility */,
 				D25CFF7A2A5C4FCC003DDB39 /* ViewController */,
 				D2E273732A5C486D00AE5E8D /* SceneDelegate.swift */,
 				D25CFF782A5C4DF9003DDB39 /* RootViewController.swift */,
-				D2E2737A2A5C486E00AE5E8D /* Assets.xcassets */,
 				D2E2737C2A5C486E00AE5E8D /* LaunchScreen.storyboard */,
 				D2E2737F2A5C486E00AE5E8D /* Info.plist */,
 			);
