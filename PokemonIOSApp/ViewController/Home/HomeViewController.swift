@@ -9,10 +9,24 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
+    private let useCase = GetPokemonInfoUseCase()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.isNavigationBarHidden = true
         view.backgroundColor = UIColor.blue
+        fetchData()
+    }
+
+    private func fetchData() {
+        useCase.execute { result in
+            switch result {
+            case .success(let pokemonList):
+                let a = 2
+            case .failure(let error):
+                let a = 2
+            }
+        }
     }
 
 }
