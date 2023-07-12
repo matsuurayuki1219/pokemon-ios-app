@@ -18,8 +18,11 @@ class PokemonApi {
     func getPokemonList(
         completion: @escaping (Result<PokemonEntity, Error>) -> Void
     ) {
-        let url = URL(string: BASE_URL + "/pokemon")!
-        let task = URLSession.shared.dataTask(with: url) { data, response, error in
+        guard let url = URL(string: BASE_URL + "/pokemon") else {
+            return completion(.failure(NSError(domain: "", code: 404, userInfo: [ NSLocalizedDescriptionKey: "Not Exist URL."])))
+        }
+        var request = URLRequest(url: url)
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
             if let error = error {
                 completion(.failure(error))
             } else if let data = data {
@@ -32,6 +35,7 @@ class PokemonApi {
                 }
             }
         }
+        task.resume()
     }
     
 }

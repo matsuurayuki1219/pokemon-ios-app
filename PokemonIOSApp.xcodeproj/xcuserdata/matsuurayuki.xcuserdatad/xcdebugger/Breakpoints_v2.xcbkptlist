@@ -56,14 +56,14 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "29A6E1B8-63B4-44A2-A997-C7BC6F353CFB"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PokemonIOSApp/Data/API/PokemonApi.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
             landmarkName = "getPokemonList(completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -72,14 +72,14 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "0A684AAD-44B7-4155-ADAA-FD6227726F30"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PokemonIOSApp/Data/API/PokemonApi.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
             landmarkName = "getPokemonList(completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -94,8 +94,8 @@
             filePath = "PokemonIOSApp/Data/API/PokemonApi.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
             landmarkName = "getPokemonList(completion:)"
             landmarkType = "7">
             <Locations>
@@ -136,14 +136,14 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "C14563B4-1CC8-4632-8F05-3386BF9D894A"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PokemonIOSApp/Data/API/PokemonApi.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
             landmarkName = "getPokemonList(completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -152,14 +152,14 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "90097DCB-B482-4B5E-89CA-2EF7ED32987A"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PokemonIOSApp/Data/API/PokemonApi.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
             landmarkName = "getPokemonList(completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -168,7 +168,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "3331E63D-D7F7-4834-8BAB-2291CEC9E5BC"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PokemonIOSApp/Data/API/PokemonApi.swift"
@@ -178,6 +178,118 @@
             endingLineNumber = "21"
             landmarkName = "getPokemonList(completion:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "3331E63D-D7F7-4834-8BAB-2291CEC9E5BC - 80065b74c6f2a10f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PokemonIOSApp.PokemonApi.getPokemonList(completion: (Swift.Result&lt;PokemonIOSApp.PokemonEntity, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "PokemonIOSApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/matsuurayuki/Documents/GitHub/Personal/pokemon-ios-app/PokemonIOSApp/Data/API/PokemonApi.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "232">
+               </Location>
+               <Location
+                  uuid = "3331E63D-D7F7-4834-8BAB-2291CEC9E5BC - 80065b74c6f2a10f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PokemonIOSApp.PokemonApi.getPokemonList(completion: (Swift.Result&lt;PokemonIOSApp.PokemonEntity, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "PokemonIOSApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/matsuurayuki/Documents/GitHub/Personal/pokemon-ios-app/PokemonIOSApp/Data/API/PokemonApi.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "412">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "227B5877-FFE4-4074-BDF7-01DEA796ADAD"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PokemonIOSApp/Data/API/PokemonApi.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "getPokemonList(completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "21C4A9CD-4FE1-4178-A179-F111494F00E7"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PokemonIOSApp/Data/API/PokemonApi.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "getPokemonList(completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "434DC34B-05A0-4C31-980E-2DA84DF179D0"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PokemonIOSApp/Data/API/PokemonApi.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "getPokemonList(completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "434DC34B-05A0-4C31-980E-2DA84DF179D0 - 80065b74c6f2a68b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PokemonIOSApp.PokemonApi.getPokemonList(completion: (Swift.Result&lt;PokemonIOSApp.PokemonEntity, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "PokemonIOSApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/matsuurayuki/Documents/GitHub/Personal/pokemon-ios-app/PokemonIOSApp/Data/API/PokemonApi.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "624">
+               </Location>
+               <Location
+                  uuid = "434DC34B-05A0-4C31-980E-2DA84DF179D0 - ea7d64b275e2cb99"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in PokemonIOSApp.PokemonApi.getPokemonList(completion: (Swift.Result&lt;PokemonIOSApp.PokemonEntity, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "PokemonIOSApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/matsuurayuki/Documents/GitHub/Personal/pokemon-ios-app/PokemonIOSApp/Data/API/PokemonApi.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "164">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
