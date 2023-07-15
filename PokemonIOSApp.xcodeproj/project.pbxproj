@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D2374F6B2A62DE2A00641FBE /* UIColor+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2374F6A2A62DE2A00641FBE /* UIColor+Util.swift */; };
+		D2374F6E2A62DE6C00641FBE /* UIColorHexSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D2374F6D2A62DE6C00641FBE /* UIColorHexSwift */; };
 		D23826442A5ECB1C0021F142 /* HomeViewController+PokemonList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23826432A5ECB1C0021F142 /* HomeViewController+PokemonList.swift */; };
 		D23826462A5ECD410021F142 /* HomeViewController+PokemonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23826452A5ECD410021F142 /* HomeViewController+PokemonCell.swift */; };
 		D23826492A5ECF080021F142 /* PokemonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23826482A5ECF080021F142 /* PokemonView.swift */; };
@@ -32,6 +34,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D2374F6A2A62DE2A00641FBE /* UIColor+Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Util.swift"; sourceTree = "<group>"; };
 		D23826432A5ECB1C0021F142 /* HomeViewController+PokemonList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController+PokemonList.swift"; sourceTree = "<group>"; };
 		D23826452A5ECD410021F142 /* HomeViewController+PokemonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController+PokemonCell.swift"; sourceTree = "<group>"; };
 		D23826482A5ECF080021F142 /* PokemonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonView.swift; sourceTree = "<group>"; };
@@ -62,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2374F6E2A62DE6C00641FBE /* UIColorHexSwift in Frameworks */,
 				D26F113C2A6262DF003A1226 /* Nuke in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -131,6 +135,7 @@
 		D26F11452A627BC3003A1226 /* Extenstion */ = {
 			isa = PBXGroup;
 			children = (
+				D2374F6A2A62DE2A00641FBE /* UIColor+Util.swift */,
 				D26F11462A627C24003A1226 /* String+Util.swift */,
 			);
 			path = Extenstion;
@@ -236,6 +241,7 @@
 			name = PokemonIOSApp;
 			packageProductDependencies = (
 				D26F113B2A6262DF003A1226 /* Nuke */,
+				D2374F6D2A62DE6C00641FBE /* UIColorHexSwift */,
 			);
 			productName = PokemonIOSApp;
 			productReference = D2E2736E2A5C486D00AE5E8D /* PokemonIOSApp.app */;
@@ -267,6 +273,7 @@
 			mainGroup = D2E273652A5C486D00AE5E8D;
 			packageReferences = (
 				D26F113A2A6262DF003A1226 /* XCRemoteSwiftPackageReference "Nuke" */,
+				D2374F6C2A62DE6C00641FBE /* XCRemoteSwiftPackageReference "UIColor-Hex-Swift" */,
 			);
 			productRefGroup = D2E2736F2A5C486D00AE5E8D /* Products */;
 			projectDirPath = "";
@@ -305,6 +312,7 @@
 				D2D75ABF2A5D9AB400E3BD2B /* GetPokemonInfoUseCase.swift in Sources */,
 				D2D75AB52A5D94C500E3BD2B /* PokemonRepository.swift in Sources */,
 				D2D75AB32A5D949C00E3BD2B /* PokemonEntity.swift in Sources */,
+				D2374F6B2A62DE2A00641FBE /* UIColor+Util.swift in Sources */,
 				D23826462A5ECD410021F142 /* HomeViewController+PokemonCell.swift in Sources */,
 				D26F11422A6277F3003A1226 /* OtherEntity.swift in Sources */,
 				D2E273742A5C486D00AE5E8D /* SceneDelegate.swift in Sources */,
@@ -526,6 +534,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		D2374F6C2A62DE6C00641FBE /* XCRemoteSwiftPackageReference "UIColor-Hex-Swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/yeahdongcn/UIColor-Hex-Swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 		D26F113A2A6262DF003A1226 /* XCRemoteSwiftPackageReference "Nuke" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/kean/Nuke.git";
@@ -537,6 +553,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		D2374F6D2A62DE6C00641FBE /* UIColorHexSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D2374F6C2A62DE6C00641FBE /* XCRemoteSwiftPackageReference "UIColor-Hex-Swift" */;
+			productName = UIColorHexSwift;
+		};
 		D26F113B2A6262DF003A1226 /* Nuke */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = D26F113A2A6262DF003A1226 /* XCRemoteSwiftPackageReference "Nuke" */;

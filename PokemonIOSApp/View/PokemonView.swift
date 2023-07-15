@@ -11,6 +11,12 @@ import Nuke
 
 class PokemonView: UIView {
 
+    private lazy var containerView: UIView = {
+        let view = UIView()
+        view.backgroundColor = UIColor.white
+        return view
+    }()
+
     private lazy var imageView: UIImageView = {
         let view = UIImageView(frame: .zero)
         return view
@@ -18,45 +24,48 @@ class PokemonView: UIView {
 
     lazy var pokemonNoLabel: UILabel = {
         let view = UILabel(frame: .zero)
+        view.font = UIFont.systemFont(ofSize: 16.0)
         return view
     }()
 
     private lazy var pokemonNameLabel: UILabel = {
         let view = UILabel(frame: .zero)
+        view.font = UIFont.systemFont(ofSize: 16.0)
         return view
     }()
 
     override func didMoveToSuperview() {
-        backgroundColor = UIColor.white
-        addSubview(imageView)
-        addSubview(pokemonNoLabel)
-        addSubview(pokemonNameLabel)
+        addSubview(containerView)
+        backgroundColor = UIColor.gray90
+        containerView.addSubview(imageView)
+        containerView.addSubview(pokemonNoLabel)
+        containerView.addSubview(pokemonNameLabel)
     }
 
     override func layoutSubviews() {
         super.layoutSubviews()
         let width = bounds.width
         let height = bounds.height
-        initParentView(height: height)
+        initContainerView(width: width, height: height)
         initImageView(width: width, height: height)
         initUILabel(width: width, height: height)
     }
 
-    private func initParentView(height: CGFloat) {
-        layer.cornerRadius = height / 2
-        layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner]
-        backgroundColor = UIColor.cyan
+    private func initContainerView(width: CGFloat, height: CGFloat) {
+        containerView.frame = CGRect(x: 40, y: 0, width: width, height: height)
+        containerView.layer.cornerRadius = height / 2
+        containerView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner]
     }
 
     private func initImageView(width: CGFloat, height: CGFloat) {
-        imageView.frame = CGRect(x: height / 2, y: 10, width: 100, height: height)
+        let verticalMargin = CGFloat(8)
+        imageView.frame = CGRect(x: height / 4, y: verticalMargin, width: 100, height: height - verticalMargin * 2)
     }
 
     private func initUILabel(width: CGFloat, height: CGFloat) {
-        pokemonNoLabel.font = UIFont.systemFont(ofSize: 14.0)
-        pokemonNoLabel.frame = CGRect(x: imageView.bounds.width, y: 0, width: 100, height: height / 2)
-        pokemonNameLabel.font = UIFont.systemFont(ofSize: 14.0)
-        pokemonNameLabel.frame = CGRect(x: imageView.bounds.width, y: height / 2, width: 100, height: height / 2)
+        let verticalMargin = CGFloat(16)
+        pokemonNoLabel.frame = CGRect(x: imageView.bounds.width + imageView.frame.origin.x + 30, y: verticalMargin, width: 100, height: height / 2 - verticalMargin)
+        pokemonNameLabel.frame = CGRect(x: imageView.bounds.width + imageView.frame.origin.x + 30, y: verticalMargin + pokemonNoLabel.bounds.height, width: 100, height: height / 2 - verticalMargin)
     }
 
     func setImageUrl(url: String) {
@@ -65,7 +74,7 @@ class PokemonView: UIView {
     }
 
     func setPokemonNo(number: String) {
-        pokemonNoLabel.text = number
+        pokemonNoLabel.text = "No.\(number)"
     }
 
     func setPokemonName(name: String) {

@@ -19,11 +19,14 @@ extension HomeViewController {
             view.register(PokemonCell.self, forCellReuseIdentifier: "Cell")
             view.delegate = self
             view.dataSource = self
+            view.separatorStyle = .none
+            view.backgroundColor = UIColor.gray90
             return view
         }()
 
         override func layoutSubviews() {
             super.layoutSubviews()
+            backgroundColor = UIColor.black
             tableView.frame = bounds
         }
 
@@ -46,11 +49,29 @@ extension HomeViewController {
 extension HomeViewController.PokemonList: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+
+    func numberOfSections(in tableView: UITableView) -> Int {
         return items.count
     }
 
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 2
+    }
+
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
+
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let marginView = UIView()
+        marginView.backgroundColor = .clear
+        return marginView
+    }
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let item = items[indexPath.row]
+        let item = items[indexPath.section]
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! PokemonCell
         cell.pokemonView.setImageUrl(url: item.imageUrl)
         cell.pokemonView.setPokemonName(name: item.enName)
@@ -59,24 +80,8 @@ extension HomeViewController.PokemonList: UITableViewDataSource {
         return cell
     }
 
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-       return CGFloat(60)
-
-    }
-
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return CGFloat(60)
-
-    }
-
 }
 
 extension HomeViewController.PokemonList: UITableViewDelegate {
-
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {}
 
 }
