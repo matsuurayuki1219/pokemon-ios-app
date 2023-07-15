@@ -9,20 +9,33 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
+    private lazy var tableView: PokemonList = {
+        let view = PokemonList()
+        return view
+    }()
+
     private let useCase = GetPokemonInfoUseCase()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.isNavigationBarHidden = true
         view.backgroundColor = UIColor.blue
+        view.addSubview(tableView)
         fetchData()
     }
 
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        tableView.frame = view.bounds
+    }
+
     private func fetchData() {
-        useCase.execute { result in
+        useCase.execute { [weak self] result in
             switch result {
             case .success(let pokemonList):
-                let a = 2
+                DispatchQueue.main.async {
+                    self?.tableView.reload(items: pokemonList)
+                }
             case .failure(let error):
                 let a = 2
             }

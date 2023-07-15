@@ -8,25 +8,36 @@
 import Foundation
 import UIKit
 
-protocol PokemonListDelegate {
-
-}
-
-
 extension HomeViewController {
 
     class PokemonList: UIView {
 
+        private(set) var items = [PokemonModel]()
+
         private lazy var tableView: UITableView = {
             let view = UITableView(frame: .zero, style: .plain)
-            view.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+            view.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
             view.delegate = self
             view.dataSource = self
             return view
         }()
 
-    }
+        override func layoutSubviews() {
+            super.layoutSubviews()
+            tableView.frame = bounds
+        }
 
+        override func willMove(toSuperview newSuperview: UIView?) {
+            super.willMove(toSuperview: newSuperview)
+            addSubview(tableView)
+        }
+
+        func reload(items: [PokemonModel]) {
+            self.items = items
+            tableView.reloadData()
+        }
+
+    }
 
 }
 
@@ -35,17 +46,34 @@ extension HomeViewController {
 extension HomeViewController.PokemonList: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
+        return items.count
     }
-
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        cell.textLabel?.text = items[indexPath.row].enName
+        cell.selectionStyle = .none
+        return cell
     }
 
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+       return CGFloat(60)
+
+    }
+
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return CGFloat(60)
+
+    }
 
 }
 
 extension HomeViewController.PokemonList: UITableViewDelegate {
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {}
 
 }

@@ -12,6 +12,7 @@
 		D23826492A5ECF080021F142 /* PokemonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23826482A5ECF080021F142 /* PokemonView.swift */; };
 		D25CFF792A5C4DF9003DDB39 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25CFF782A5C4DF9003DDB39 /* RootViewController.swift */; };
 		D25CFF7C2A5C4FEE003DDB39 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25CFF7B2A5C4FEE003DDB39 /* HomeViewController.swift */; };
+		D26F113C2A6262DF003A1226 /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = D26F113B2A6262DF003A1226 /* Nuke */; };
 		D2D75AB02A5D93EB00E3BD2B /* PokemonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D75AAF2A5D93EB00E3BD2B /* PokemonModel.swift */; };
 		D2D75AB32A5D949C00E3BD2B /* PokemonEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D75AB22A5D949C00E3BD2B /* PokemonEntity.swift */; };
 		D2D75AB52A5D94C500E3BD2B /* PokemonRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D75AB42A5D94C500E3BD2B /* PokemonRepository.swift */; };
@@ -51,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D26F113C2A6262DF003A1226 /* Nuke in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,6 +211,9 @@
 			dependencies = (
 			);
 			name = PokemonIOSApp;
+			packageProductDependencies = (
+				D26F113B2A6262DF003A1226 /* Nuke */,
+			);
 			productName = PokemonIOSApp;
 			productReference = D2E2736E2A5C486D00AE5E8D /* PokemonIOSApp.app */;
 			productType = "com.apple.product-type.application";
@@ -237,6 +242,9 @@
 				Base,
 			);
 			mainGroup = D2E273652A5C486D00AE5E8D;
+			packageReferences = (
+				D26F113A2A6262DF003A1226 /* XCRemoteSwiftPackageReference "Nuke" */,
+			);
 			productRefGroup = D2E2736F2A5C486D00AE5E8D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -488,6 +496,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D26F113A2A6262DF003A1226 /* XCRemoteSwiftPackageReference "Nuke" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kean/Nuke.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D26F113B2A6262DF003A1226 /* Nuke */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D26F113A2A6262DF003A1226 /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = Nuke;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D2E273662A5C486D00AE5E8D /* Project object */;
 }

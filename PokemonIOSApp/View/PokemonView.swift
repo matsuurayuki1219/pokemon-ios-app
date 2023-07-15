@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import Nuke
 
 class PokemonView: UIView {
 
@@ -15,13 +16,14 @@ class PokemonView: UIView {
         return view
     }()
 
-    private lazy var pokemonNoLabel: UILabel = {
+    lazy var pokemonNoLabel: UILabel = {
         let view = UILabel(frame: .zero)
         return view
     }()
 
     private lazy var pokemonNameLabel: UILabel = {
         let view = UILabel(frame: .zero)
+        return view
     }()
 
     override func didMoveToSuperview() {
@@ -34,16 +36,40 @@ class PokemonView: UIView {
     override func layoutSubviews() {
         super.layoutSubviews()
         let width = bounds.width
-        let height = 60
-        let x = (width - logoImageView.bounds.width) / 2
-        let y = (height - logoImageView.bounds.height - top - bottom) / 2
-        logoImageView.frame = CGRect(x: x, y: y, width: logoImageView.bounds.width, height: logoImageView.bounds.height)
+        let height = bounds.height
+        initParentView(height: height)
+        initImageView(width: width, height: height)
+        initUILabel(width: width, height: height)
     }
 
-    func renderImage() {}
+    private func initParentView(height: CGFloat) {
+        layer.cornerRadius = height / 2
+        layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner]
+        backgroundColor = UIColor.cyan
+    }
 
-    func setPokemonNo() {}
+    private func initImageView(width: CGFloat, height: CGFloat) {
+        imageView.frame = CGRect(x: height / 2, y: 10, width: 100, height: height)
+    }
 
-    func setPokemonName() {}
+    private func initUILabel(width: CGFloat, height: CGFloat) {
+        pokemonNoLabel.font = UIFont.systemFont(ofSize: 14.0)
+        pokemonNoLabel.frame = CGRect(x: imageView.bounds.width, y: 0, width: 100, height: height / 2)
+        pokemonNameLabel.font = UIFont.systemFont(ofSize: 14.0)
+        pokemonNoLabel.frame = CGRect(x: imageView.bounds.width, y: height / 2, width: 100, height: height / 2)
+    }
+
+    func setImageUrl(url: String) {
+        guard let url = URL(string: url) else { return }
+        Nuke.loadImage(with: url, into: imageView)
+    }
+
+    func setPokemonNo(number: String) {
+        pokemonNoLabel.text = number
+    }
+
+    func setPokemonName(name: String) {
+        pokemonNameLabel.text = name
+    }
 
 }
