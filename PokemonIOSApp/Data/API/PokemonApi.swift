@@ -37,5 +37,29 @@ class PokemonApi {
         }
         task.resume()
     }
+
+    func getPokemonDetail(
+        pokemonId: Int,
+        completion: @escaping (Result<PokemonDetailEntity, Error>) -> Void
+    ) {
+        guard let url = URL(string: BASE_URL + "/pokemon/\(pokemonId)") else {
+            return completion(.failure(NSError(domain: "", code: 404, userInfo: [ NSLocalizedDescriptionKey: "Not Exist URL."])))
+        }
+        var request = URLRequest(url: url)
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            if let error = error {
+                completion(.failure(error))
+            } else if let data = data {
+                let decorder = JSONDecoder()
+                do {
+                    let decoded = try decorder.decode(PokemonDetailEntity.self, from: data)
+                    completion(.success(decoded))
+                } catch {
+                    completion(.failure(error))
+                }
+            }
+        }
+        task.resume()
+    }
     
 }

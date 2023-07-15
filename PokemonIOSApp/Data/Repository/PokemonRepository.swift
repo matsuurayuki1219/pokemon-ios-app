@@ -16,4 +16,13 @@ class PokemonRepository {
             completion(result)
         }
     }
+
+    func getPokemonDeital(
+        pokemonId: Int,
+        completion: @escaping (Result<PokemonDetailEntity, Error>) -> Void
+    ) {
+        PokemonApi.shared.getPokemonDetail(pokemonId: pokemonId, completion: { result in
+            completion(result)
+        }
+    )}
 }
