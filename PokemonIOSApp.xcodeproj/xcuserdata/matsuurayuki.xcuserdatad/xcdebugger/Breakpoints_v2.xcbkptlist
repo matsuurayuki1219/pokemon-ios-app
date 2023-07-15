@@ -340,5 +340,116 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5F3C9C64-4AD1-4E58-BF6D-D19552F86326"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PokemonIOSApp/UseCase/GetPokemonInfoUseCase.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "execute(completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A6175062-DC8B-4457-AEE9-2EE03B070870"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PokemonIOSApp/UseCase/GetPokemonInfoUseCase.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "execute(completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D9412DD0-ED64-4B0D-99B1-FAEB8119DF5D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PokemonIOSApp/UseCase/GetPokemonInfoUseCase.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "execute(completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "155EDDF6-046A-4E6D-B988-F727055F18F2"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PokemonIOSApp/UseCase/GetPokemonInfoUseCase.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "execute(completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "155EDDF6-046A-4E6D-B988-F727055F18F2 - 4360d3d418ed1a5c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PokemonIOSApp.GetPokemonInfoUseCase.execute(completion: (Swift.Result&lt;Swift.Array&lt;PokemonIOSApp.PokemonModel&gt;, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "PokemonIOSApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/matsuurayuki/Documents/GitHub/Personal/pokemon-ios-app/PokemonIOSApp/UseCase/GetPokemonInfoUseCase.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "400">
+               </Location>
+               <Location
+                  uuid = "155EDDF6-046A-4E6D-B988-F727055F18F2 - 4202112e127a648f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (PokemonIOSApp.PokemonInfoEntity) -&gt; () in PokemonIOSApp.GetPokemonInfoUseCase.execute(completion: (Swift.Result&lt;Swift.Array&lt;PokemonIOSApp.PokemonModel&gt;, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "PokemonIOSApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/matsuurayuki/Documents/GitHub/Personal/pokemon-ios-app/PokemonIOSApp/UseCase/GetPokemonInfoUseCase.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "108">
+               </Location>
+               <Location
+                  uuid = "155EDDF6-046A-4E6D-B988-F727055F18F2 - 3e92086b47ab3ea2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;PokemonIOSApp.PokemonDetailEntity, Swift.Error&gt;) -&gt; () in closure #2 (PokemonIOSApp.PokemonInfoEntity) -&gt; () in PokemonIOSApp.GetPokemonInfoUseCase.execute(completion: (Swift.Result&lt;Swift.Array&lt;PokemonIOSApp.PokemonModel&gt;, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "PokemonIOSApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/matsuurayuki/Documents/GitHub/Personal/pokemon-ios-app/PokemonIOSApp/UseCase/GetPokemonInfoUseCase.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "140">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

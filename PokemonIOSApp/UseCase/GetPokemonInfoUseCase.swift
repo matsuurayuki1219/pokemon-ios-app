@@ -14,33 +14,47 @@ class GetPokemonInfoUseCase {
     func execute(
         completion: @escaping (Result<[PokemonModel], Error>) -> Void
     ) {
-        repository.getPokemonInfo { [weak self] result in
+        let semaphore = DispatchSemaphore(value: 0)
+        var pokemonList: [PokemonInfoEntity] = []
+
+        repository.getPokemonInfo { result in
             switch result {
             case .success(let pokemonInfo):
-                let pokemonId = 1
-                let pokemonList = pokemonInfo.results
-                self?.repository.getPokemonDeital(pokemonId: pokemonId) { result in
-                    switch result {
-                    case .success(let pokemonDetail):
-                        let converted = pokemonList.map {
-                            PokemonModel.init(
-                                id: pokemonId,
-                                enName: $0.name,
-                                imageUrl: pokemonDetail.sprites.other.officialArtwork.front_default
-                            )
-                        }
-                        completion(.success(converted))
-                        break
-                    case .failure(let error):
-                        completion(.failure(error))
-                        break
-                    }
-                }
+                pokemonList = pokemonInfo.results
+                semaphore.signal()
             case .failure(let error):
                 completion(.failure(error))
+                semaphore.signal()
                 break
             }
         }
+        semaphore.wait()
+
+        var pokemonModels: [PokemonModel] = []
+
+        pokemonList.forEach {
+            let pokemonId = $0.url.extractLastPathFromUrl()
+            let pokemonName = $0.name
+            repository.getPokemonDeital(pokemonId: pokemonId) { result in
+                switch result {
+                case .success(let pokemonDetail):
+                    let converted = PokemonModel.init(
+                        id: pokemonId,
+                        enName: pokemonName,
+                        imageUrl: pokemonDetail.sprites.other.officialArtwork.front_default
+                    )
+                    pokemonModels.append(converted)
+                    semaphore.signal()
+                    break
+                case .failure(let error):
+                    completion(.failure(error))
+                    semaphore.signal()
+                    break
+                }
+            }
+            semaphore.wait()
+        }
+        completion(.success(pokemonModels))
     }
 
 }

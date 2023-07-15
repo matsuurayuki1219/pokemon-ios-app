@@ -17,6 +17,7 @@
 		D26F11402A627787003A1226 /* SpritesEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26F113F2A627787003A1226 /* SpritesEntity.swift */; };
 		D26F11422A6277F3003A1226 /* OtherEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26F11412A6277F3003A1226 /* OtherEntity.swift */; };
 		D26F11442A627815003A1226 /* OfficialArtworkEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26F11432A627815003A1226 /* OfficialArtworkEntity.swift */; };
+		D26F11472A627C24003A1226 /* String+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26F11462A627C24003A1226 /* String+Util.swift */; };
 		D2D75AB02A5D93EB00E3BD2B /* PokemonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D75AAF2A5D93EB00E3BD2B /* PokemonModel.swift */; };
 		D2D75AB32A5D949C00E3BD2B /* PokemonEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D75AB22A5D949C00E3BD2B /* PokemonEntity.swift */; };
 		D2D75AB52A5D94C500E3BD2B /* PokemonRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D75AB42A5D94C500E3BD2B /* PokemonRepository.swift */; };
@@ -40,6 +41,7 @@
 		D26F113F2A627787003A1226 /* SpritesEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpritesEntity.swift; sourceTree = "<group>"; };
 		D26F11412A6277F3003A1226 /* OtherEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherEntity.swift; sourceTree = "<group>"; };
 		D26F11432A627815003A1226 /* OfficialArtworkEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfficialArtworkEntity.swift; sourceTree = "<group>"; };
+		D26F11462A627C24003A1226 /* String+Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Util.swift"; sourceTree = "<group>"; };
 		D2D75AAF2A5D93EB00E3BD2B /* PokemonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonModel.swift; sourceTree = "<group>"; };
 		D2D75AB22A5D949C00E3BD2B /* PokemonEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonEntity.swift; sourceTree = "<group>"; };
 		D2D75AB42A5D94C500E3BD2B /* PokemonRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonRepository.swift; sourceTree = "<group>"; };
@@ -126,6 +128,14 @@
 			path = Root;
 			sourceTree = "<group>";
 		};
+		D26F11452A627BC3003A1226 /* Extenstion */ = {
+			isa = PBXGroup;
+			children = (
+				D26F11462A627C24003A1226 /* String+Util.swift */,
+			);
+			path = Extenstion;
+			sourceTree = "<group>";
+		};
 		D2D75AAB2A5D93A800E3BD2B /* Data */ = {
 			isa = PBXGroup;
 			children = (
@@ -192,6 +202,7 @@
 		D2E273702A5C486D00AE5E8D /* PokemonIOSApp */ = {
 			isa = PBXGroup;
 			children = (
+				D26F11452A627BC3003A1226 /* Extenstion */,
 				D23826472A5ECEF30021F142 /* View */,
 				D2D75AB62A5D957200E3BD2B /* UseCase */,
 				D2D75AAB2A5D93A800E3BD2B /* Data */,
@@ -289,6 +300,7 @@
 				D25CFF792A5C4DF9003DDB39 /* RootViewController.swift in Sources */,
 				D23826442A5ECB1C0021F142 /* HomeViewController+PokemonList.swift in Sources */,
 				D23826492A5ECF080021F142 /* PokemonView.swift in Sources */,
+				D26F11472A627C24003A1226 /* String+Util.swift in Sources */,
 				D26F11402A627787003A1226 /* SpritesEntity.swift in Sources */,
 				D2D75ABF2A5D9AB400E3BD2B /* GetPokemonInfoUseCase.swift in Sources */,
 				D2D75AB52A5D94C500E3BD2B /* PokemonRepository.swift in Sources */,
