@@ -56,7 +56,7 @@ class PokemonView: UIView {
         pokemonNoLabel.font = UIFont.systemFont(ofSize: 14.0)
         pokemonNoLabel.frame = CGRect(x: imageView.bounds.width, y: 0, width: 100, height: height / 2)
         pokemonNameLabel.font = UIFont.systemFont(ofSize: 14.0)
-        pokemonNoLabel.frame = CGRect(x: imageView.bounds.width, y: height / 2, width: 100, height: height / 2)
+        pokemonNameLabel.frame = CGRect(x: imageView.bounds.width, y: height / 2, width: 100, height: height / 2)
     }
 
     func setImageUrl(url: String) {

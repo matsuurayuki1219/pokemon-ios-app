@@ -16,7 +16,7 @@ extension HomeViewController {
 
         private lazy var tableView: UITableView = {
             let view = UITableView(frame: .zero, style: .plain)
-            view.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+            view.register(PokemonCell.self, forCellReuseIdentifier: "Cell")
             view.delegate = self
             view.dataSource = self
             return view
@@ -50,8 +50,11 @@ extension HomeViewController.PokemonList: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        cell.textLabel?.text = items[indexPath.row].enName
+        let item = items[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! PokemonCell
+        cell.pokemonView.setImageUrl(url: item.imageUrl)
+        cell.pokemonView.setPokemonName(name: item.enName)
+        cell.pokemonView.setPokemonNo(number: String(item.id))
         cell.selectionStyle = .none
         return cell
     }
