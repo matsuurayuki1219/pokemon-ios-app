@@ -20,7 +20,7 @@ class GetPokemonInfoUseCase {
         repository.getPokemonInfo { result in
             switch result {
             case .success(let pokemonInfo):
-                pokemonList = pokemonInfo.results
+                pokemonList = pokemonInfo.pokemonList
                 semaphore.signal()
             case .failure(let error):
                 completion(.failure(error))
@@ -41,7 +41,7 @@ class GetPokemonInfoUseCase {
                     let converted = PokemonModel.init(
                         id: pokemonId,
                         enName: pokemonName,
-                        imageUrl: pokemonDetail.sprites.other.officialArtwork.front_default
+                        imageUrl: pokemonDetail.sprites.other.officialArtwork.frontDefault
                     )
                     pokemonModels.append(converted)
                     semaphore.signal()

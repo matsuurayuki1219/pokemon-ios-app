@@ -8,5 +8,9 @@
 import Foundation
 
 struct OfficialArtworkEntity: Decodable {
-    let front_default: String
+    let frontDefault: String
+
+    private enum CodingKeys: String, CodingKey {
+        case frontDefault = "front_default"
+    }
 }

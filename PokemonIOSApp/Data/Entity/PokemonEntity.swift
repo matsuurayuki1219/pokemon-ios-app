@@ -11,5 +11,12 @@ struct PokemonEntity: Decodable {
     let count: Int
     let next: String?
     let previous: String?
-    let results: [PokemonInfoEntity]
+    let pokemonList: [PokemonInfoEntity]
+
+    private enum CodingKeys: String, CodingKey {
+        case count = "count"
+        case next = "next"
+        case previous = "previous"
+        case pokemonList = "results"
+    }
 }
