@@ -18,14 +18,19 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.isNavigationBarHidden = true
         view.addSubview(tableView)
+        initNavBar()
         fetchData()
     }
 
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
         tableView.frame = view.bounds
+    }
+
+    private func initNavBar() {
+        title = Constant.APP_TITLE
+        navigationItem.hidesBackButton = true
     }
 
     private func fetchData() {
