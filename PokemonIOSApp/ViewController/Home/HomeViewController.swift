@@ -19,6 +19,7 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(tableView)
+        tableView.delegate = self
         initNavBar()
         fetchData()
     }
@@ -47,3 +48,14 @@ class HomeViewController: UIViewController {
     }
 
 }
+
+
+extension HomeViewController: PokemonListTableViewDelegate {
+
+    func pokemonListTableViewCell(didSelectPokemonId: Int) {
+        let vc = DetailViewController()
+        vc.pokemonId = dedSelectPokemonId
+        navigationController?.pushViewController(vc, animated: true)
+    }
+}
+

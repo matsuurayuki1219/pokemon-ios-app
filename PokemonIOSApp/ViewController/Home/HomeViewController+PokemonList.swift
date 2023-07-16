@@ -8,11 +8,19 @@
 import Foundation
 import UIKit
 
+protocol PokemonListTableViewDelegate: AnyObject {
+
+    func pokemonListTableViewCell(didSelectPokemonId: Int)
+
+}
+
 extension HomeViewController {
 
     class PokemonList: UIView {
 
         private(set) var items = [PokemonModel]()
+
+        weak var delegate: PokemonListTableViewDelegate?
 
         private lazy var tableView: UITableView = {
             let view = UITableView(frame: .zero, style: .plain)
@@ -83,5 +91,10 @@ extension HomeViewController.PokemonList: UITableViewDataSource {
 }
 
 extension HomeViewController.PokemonList: UITableViewDelegate {
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let pokemonId = items[indexPath.section].id
+        delegate?.pokemonListTableViewCell(dedSelectPokemonId: pokemonId)
+    }
 
 }

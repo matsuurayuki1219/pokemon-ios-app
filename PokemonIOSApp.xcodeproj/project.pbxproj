@@ -21,6 +21,7 @@
 		D26F11442A627815003A1226 /* OfficialArtworkEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26F11432A627815003A1226 /* OfficialArtworkEntity.swift */; };
 		D26F11472A627C24003A1226 /* String+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26F11462A627C24003A1226 /* String+Util.swift */; };
 		D2D082BD2A63B74600811D27 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D082BC2A63B74600811D27 /* Constant.swift */; };
+		D2D082C12A63BABF00811D27 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D082C02A63BABF00811D27 /* DetailViewController.swift */; };
 		D2D75AB02A5D93EB00E3BD2B /* PokemonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D75AAF2A5D93EB00E3BD2B /* PokemonModel.swift */; };
 		D2D75AB32A5D949C00E3BD2B /* PokemonEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D75AB22A5D949C00E3BD2B /* PokemonEntity.swift */; };
 		D2D75AB52A5D94C500E3BD2B /* PokemonRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D75AB42A5D94C500E3BD2B /* PokemonRepository.swift */; };
@@ -47,6 +48,7 @@
 		D26F11432A627815003A1226 /* OfficialArtworkEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfficialArtworkEntity.swift; sourceTree = "<group>"; };
 		D26F11462A627C24003A1226 /* String+Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Util.swift"; sourceTree = "<group>"; };
 		D2D082BC2A63B74600811D27 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		D2D082C02A63BABF00811D27 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		D2D75AAF2A5D93EB00E3BD2B /* PokemonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonModel.swift; sourceTree = "<group>"; };
 		D2D75AB22A5D949C00E3BD2B /* PokemonEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonEntity.swift; sourceTree = "<group>"; };
 		D2D75AB42A5D94C500E3BD2B /* PokemonRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonRepository.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 		D25CFF7A2A5C4FCC003DDB39 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				D2D082BE2A63BAAA00811D27 /* Detail */,
 				D25CFF852A5C549E003DDB39 /* Root */,
 				D25CFF832A5C548E003DDB39 /* Home */,
 			);
@@ -143,6 +146,14 @@
 				D26F11462A627C24003A1226 /* String+Util.swift */,
 			);
 			path = Extenstion;
+			sourceTree = "<group>";
+		};
+		D2D082BE2A63BAAA00811D27 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				D2D082C02A63BABF00811D27 /* DetailViewController.swift */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 		D2D75AAB2A5D93A800E3BD2B /* Data */ = {
@@ -315,6 +326,7 @@
 				D2D75ABF2A5D9AB400E3BD2B /* GetPokemonInfoUseCase.swift in Sources */,
 				D2D75AB52A5D94C500E3BD2B /* PokemonRepository.swift in Sources */,
 				D2D75AB32A5D949C00E3BD2B /* PokemonEntity.swift in Sources */,
+				D2D082C12A63BABF00811D27 /* DetailViewController.swift in Sources */,
 				D2374F6B2A62DE2A00641FBE /* UIColor+Util.swift in Sources */,
 				D23826462A5ECD410021F142 /* HomeViewController+PokemonCell.swift in Sources */,
 				D26F11422A6277F3003A1226 /* OtherEntity.swift in Sources */,
