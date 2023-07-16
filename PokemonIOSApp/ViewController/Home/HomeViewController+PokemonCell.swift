@@ -27,6 +27,7 @@ extension HomeViewController.PokemonList {
 
         override func layoutSubviews() {
             super.layoutSubviews()
+            backgroundColor = .clear
             pokemonView.frame = bounds
         }
 

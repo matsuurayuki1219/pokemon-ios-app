@@ -36,7 +36,6 @@ class PokemonView: UIView {
 
     override func didMoveToSuperview() {
         addSubview(containerView)
-        backgroundColor = UIColor.gray90
         containerView.addSubview(imageView)
         containerView.addSubview(pokemonNoLabel)
         containerView.addSubview(pokemonNameLabel)
@@ -44,6 +43,7 @@ class PokemonView: UIView {
 
     override func layoutSubviews() {
         super.layoutSubviews()
+        backgroundColor = .clear
         let width = bounds.width
         let height = bounds.height
         initContainerView(width: width, height: height)

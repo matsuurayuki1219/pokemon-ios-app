@@ -66,7 +66,7 @@ extension HomeViewController.PokemonList: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let marginView = UIView()
-        marginView.backgroundColor = .clear
+        marginView.backgroundColor = .gray90
         return marginView
     }
 
