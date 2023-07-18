@@ -25,4 +25,23 @@ class PokemonRepository {
             completion(result)
         }
     )}
+
+    func getPokemonSpecies(
+        pokemonId: Int,
+        completion: @escaping (Result<PokemonSpeciesEntity, Error>) -> Void
+    ) {
+        PokemonApi.shared.getPokemonSpecies(pokemonId: pokemonId, completion: { result in
+            completion(result)
+        }
+    )}
+
+    func getPokemonEvolution(
+        chainId: Int,
+        completion: @escaping (Result<EvolutionChainEntity, Error>) -> Void
+    ) {
+        PokemonApi.shared.getEvolutionChain(chainId: chainId, completion: { result in
+            completion(result)
+        }
+    )}
+
 }

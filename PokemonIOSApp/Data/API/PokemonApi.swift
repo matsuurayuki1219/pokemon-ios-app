@@ -61,5 +61,55 @@ class PokemonApi {
         }
         task.resume()
     }
+
+    func getPokemonSpecies(
+        pokemonId: Int,
+        completion: @escaping (Result<PokemonSpeciesEntity, Error>) -> Void
+    ) {
+        guard let url = URL(string: BASE_URL + "/pokemon-species/\(pokemonId)") else {
+            return completion(.failure(NSError(domain: "", code: 404, userInfo: [ NSLocalizedDescriptionKey: "Not Exist URL."])))
+        }
+        var request = URLRequest(url: url)
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            if let error = error {
+                completion(.failure(error))
+            } else if let data = data {
+                let decorder = JSONDecoder()
+                do {
+                    let decoded = try decorder.decode(PokemonSpeciesEntity.self, from: data)
+                    completion(.success(decoded))
+                } catch {
+                    completion(.failure(error))
+                }
+            }
+        }
+        task.resume()
+    }
+
+    func getEvolutionChain(
+        chainId: Int,
+        completion: @escaping (Result<EvolutionChainEntity, Error>) -> Void
+    ) {
+        guard let url = URL(string: BASE_URL + "/evolution-chain/\(chainId)") else {
+            return completion(.failure(NSError(domain: "", code: 404, userInfo: [ NSLocalizedDescriptionKey: "Not Exist URL."])))
+        }
+        var request = URLRequest(url: url)
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            if let error = error {
+                completion(.failure(error))
+            } else if let data = data {
+                let decorder = JSONDecoder()
+                do {
+                    let decoded = try decorder.decode(EvolutionChainEntity.self, from: data)
+                    completion(.success(decoded))
+                } catch {
+                    completion(.failure(error))
+                }
+            }
+        }
+        task.resume()
+    }
+
+
     
 }

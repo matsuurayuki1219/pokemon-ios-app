@@ -13,7 +13,6 @@ class DetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .red
-        print(String(pokemonId!))
     }
+
 }

@@ -54,7 +54,7 @@ extension HomeViewController: PokemonListTableViewDelegate {
 
     func pokemonListTableViewCell(didSelectPokemonId: Int) {
         let vc = DetailViewController()
-        vc.pokemonId = dedSelectPokemonId
+        vc.pokemonId = didSelectPokemonId
         navigationController?.pushViewController(vc, animated: true)
     }
 }

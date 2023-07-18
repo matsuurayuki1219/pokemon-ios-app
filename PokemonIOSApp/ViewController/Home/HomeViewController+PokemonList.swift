@@ -94,7 +94,7 @@ extension HomeViewController.PokemonList: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let pokemonId = items[indexPath.section].id
-        delegate?.pokemonListTableViewCell(dedSelectPokemonId: pokemonId)
+        delegate?.pokemonListTableViewCell(didSelectPokemonId: pokemonId)
     }
 
 }

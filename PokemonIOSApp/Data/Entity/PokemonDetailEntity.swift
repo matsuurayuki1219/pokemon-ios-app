@@ -9,4 +9,8 @@ import Foundation
 
 struct PokemonDetailEntity: Decodable {
     let sprites: SpritesEntity
+    let weight: Int
+    let height: Int
+    let name: String
+    let type: [TypeEntity]
 }
