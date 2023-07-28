@@ -12,5 +12,5 @@ struct PokemonDetailEntity: Decodable {
     let weight: Int
     let height: Int
     let name: String
-    let type: [TypeEntity]
+    let types: [TypeEntity]
 }

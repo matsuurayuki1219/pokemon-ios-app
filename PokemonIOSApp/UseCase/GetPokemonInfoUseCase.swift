@@ -45,7 +45,6 @@ class GetPokemonInfoUseCase {
                     )
                     pokemonModels.append(converted)
                     semaphore.signal()
-                    break
                 case .failure(let error):
                     completion(.failure(error))
                     semaphore.signal()
