@@ -13,8 +13,8 @@ class DetailViewController: UIViewController {
 
     private let useCase = GetPokemonDetailInfoUseCase()
 
-    private lazy var pokemonView: PokemonInfoView = {
-        let view = PokemonInfoView()
+    private lazy var pokemonView: PokemonDetailView = {
+        let view = PokemonDetailView()
         return view
     }()
 
@@ -27,7 +27,7 @@ class DetailViewController: UIViewController {
 
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
-        pokemonView.frame = CGRect(x: 0, y: 0, width: view.bounds.width, height: view.bounds.height)
+        pokemonView.frame = view.bounds
     }
 
     private func fetchData() {
@@ -36,7 +36,10 @@ class DetailViewController: UIViewController {
             switch result {
             case .success(let pokemon):
                 DispatchQueue.main.async {
+                    self?.pokemonView.setHalfCircleColor(type: pokemon.type.first ?? PokemonType.UNKNOWN)
                     self?.pokemonView.setImage(url: pokemon.imageUrl)
+                    self?.pokemonView.setNumber(text: String(pokemon.id))
+                    self?.pokemonView.setName(text: pokemon.enName)
                 }
             case .failure(let error):
                 let a = 2

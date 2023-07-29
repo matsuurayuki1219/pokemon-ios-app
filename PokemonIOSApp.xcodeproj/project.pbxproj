@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D20DFE522A74F65600BADFBC /* HalfCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20DFE512A74F65600BADFBC /* HalfCircleView.swift */; };
+		D20DFE562A74FB3D00BADFBC /* PokemonType+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20DFE552A74FB3D00BADFBC /* PokemonType+UIColor.swift */; };
 		D222E9E32A66D9BF00C28956 /* TypeEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D222E9E22A66D9BF00C28956 /* TypeEntity.swift */; };
 		D222E9E52A66D9EE00C28956 /* TypeDetailEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D222E9E42A66D9EE00C28956 /* TypeDetailEntity.swift */; };
 		D222E9E72A66DA6C00C28956 /* PokemonDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D222E9E62A66DA6C00C28956 /* PokemonDetailModel.swift */; };
@@ -46,6 +48,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D20DFE512A74F65600BADFBC /* HalfCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalfCircleView.swift; sourceTree = "<group>"; };
+		D20DFE552A74FB3D00BADFBC /* PokemonType+UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PokemonType+UIColor.swift"; sourceTree = "<group>"; };
 		D222E9E22A66D9BF00C28956 /* TypeEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeEntity.swift; sourceTree = "<group>"; };
 		D222E9E42A66D9EE00C28956 /* TypeDetailEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeDetailEntity.swift; sourceTree = "<group>"; };
 		D222E9E62A66DA6C00C28956 /* PokemonDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonDetailModel.swift; sourceTree = "<group>"; };
@@ -101,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				D23826482A5ECF080021F142 /* PokemonView.swift */,
+				D20DFE512A74F65600BADFBC /* HalfCircleView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -167,6 +172,7 @@
 			children = (
 				D2374F6A2A62DE2A00641FBE /* UIColor+Util.swift */,
 				D24B3C552A73CC5A00195814 /* TypeEntity+Util.swift */,
+				D20DFE552A74FB3D00BADFBC /* PokemonType+UIColor.swift */,
 				D26F11462A627C24003A1226 /* String+Util.swift */,
 			);
 			path = Extenstion;
@@ -347,12 +353,14 @@
 			files = (
 				D24B3C502A73CA1F00195814 /* PokemonType.swift in Sources */,
 				D222E9E32A66D9BF00C28956 /* TypeEntity.swift in Sources */,
+				D20DFE522A74F65600BADFBC /* HalfCircleView.swift in Sources */,
 				D26F11442A627815003A1226 /* OfficialArtworkEntity.swift in Sources */,
 				D2E273722A5C486D00AE5E8D /* AppDelegate.swift in Sources */,
 				D2D75AB02A5D93EB00E3BD2B /* PokemonModel.swift in Sources */,
 				D25CFF792A5C4DF9003DDB39 /* RootViewController.swift in Sources */,
 				D23826442A5ECB1C0021F142 /* HomeViewController+PokemonList.swift in Sources */,
 				D23826492A5ECF080021F142 /* PokemonView.swift in Sources */,
+				D20DFE562A74FB3D00BADFBC /* PokemonType+UIColor.swift in Sources */,
 				D24B3C562A73CC5A00195814 /* TypeEntity+Util.swift in Sources */,
 				D24B3C4E2A73C9A300195814 /* GetPokemonDetailInfoUseCase.swift in Sources */,
 				D26F11472A627C24003A1226 /* String+Util.swift in Sources */,
