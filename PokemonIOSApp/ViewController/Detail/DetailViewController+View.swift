@@ -35,11 +35,32 @@ extension DetailViewController {
             return view
         }()
 
+        private lazy var pokemonTypeView: PokemonInfoView = {
+            let view = PokemonInfoView()
+            view.setTitle(title: "Type")
+            return view
+        }()
+
+        private lazy var pokemonHeighteView: PokemonInfoView = {
+            let view = PokemonInfoView()
+            view.setTitle(title: "Height")
+            return view
+        }()
+
+        private lazy var pokemonWeightView: PokemonInfoView = {
+            let view = PokemonInfoView()
+            view.setTitle(title: "Weight")
+            return view
+        }()
+
         override func didMoveToSuperview() {
             addSubview(halfCircleView)
             addSubview(imageView)
             addSubview(numberLabel)
             addSubview(nameLabel)
+            addSubview(pokemonTypeView)
+            addSubview(pokemonHeighteView)
+            addSubview(pokemonWeightView)
         }
 
         override func layoutSubviews() {
@@ -47,17 +68,24 @@ extension DetailViewController {
             let width = bounds.width
             let height = bounds.height
             let top = safeAreaInsets.top
-            setImageView(width: width, height: height, top: top)
-            setHalfCircleView(width: width, height: height, top: top)
+            layoutHalfCircleView(width: width, height: height, top: top)
+            layoutImageView(width: width, height: height, top: top)
+            layoutPokemonInfoView()
         }
 
-        private func setHalfCircleView(width: CGFloat, height: CGFloat, top: CGFloat) {
+        private func layoutHalfCircleView(width: CGFloat, height: CGFloat, top: CGFloat) {
             halfCircleView.frame = CGRect(x: 0, y: 0, width: width, height: width / 2)
         }
 
-        private func setImageView(width: CGFloat, height: CGFloat, top: CGFloat) {
+        private func layoutImageView(width: CGFloat, height: CGFloat, top: CGFloat) {
             let imageWidth = width * 0.6
             imageView.frame = CGRect(x: width * 0.2, y: top + 50, width: imageWidth, height: imageWidth)
+        }
+
+        private func layoutPokemonInfoView() {
+            pokemonTypeView.frame = CGRect(x: 24, y: nameLabel.frame.origin.y + nameLabel.frame.height + 40, width: frame.width - 24, height: 64)
+            pokemonHeighteView.frame = CGRect(x: 24, y: pokemonTypeView.frame.origin.y + pokemonTypeView.frame.height + 20, width: frame.width - 24, height: 64)
+            pokemonWeightView.frame = CGRect(x: 24, y: pokemonHeighteView.frame.origin.y + pokemonHeighteView.frame.height + 20, width: frame.width - 24, height: 64)
         }
 
         func setHalfCircleColor(type: PokemonType) {
@@ -73,13 +101,38 @@ extension DetailViewController {
         func setNumber(text: String) {
             numberLabel.text = "No." + text
             numberLabel.sizeToFit()
-            numberLabel.frame = CGRect(x: 48, y: imageView.frame.origin.y + imageView.frame.height + 36, width: numberLabel.frame.width, height: numberLabel.frame.height)
+            numberLabel.frame = CGRect(x: 24, y: imageView.frame.origin.y + imageView.frame.height + 36, width: numberLabel.frame.width, height: numberLabel.frame.height)
         }
 
         func setName(text: String) {
             nameLabel.text = text
             nameLabel.sizeToFit()
-            nameLabel.frame = CGRect(x: 48, y: numberLabel.frame.origin.y + numberLabel.frame.height + 20, width: nameLabel.frame.width, height: nameLabel.frame.height)
+            nameLabel.frame = CGRect(x: 24, y: numberLabel.frame.origin.y + numberLabel.frame.height + 20, width: nameLabel.frame.width, height: nameLabel.frame.height)
+        }
+
+        func setType(types: [PokemonType]) {
+            if (types.count == 1) {
+                pokemonTypeView.setContent(content: types.first!.rawValue)
+            } else {
+                var strings = ""
+                for i in 0...types.count - 1 {
+                    if (i == 0) {
+                        strings += types[i].rawValue
+                    } else {
+                        strings += " / " + types[i].rawValue
+                    }
+
+                }
+                pokemonTypeView.setContent(content: strings)
+            }
+        }
+
+        func setHeight(height: Int) {
+            pokemonHeighteView.setContent(content: String(height) + " m")
+        }
+
+        func setWeight(weight: Int) {
+            pokemonWeightView.setContent(content: String(weight) + " kg")
         }
 
     }

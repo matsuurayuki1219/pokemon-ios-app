@@ -40,6 +40,9 @@ class DetailViewController: UIViewController {
                     self?.pokemonView.setImage(url: pokemon.imageUrl)
                     self?.pokemonView.setNumber(text: String(pokemon.id))
                     self?.pokemonView.setName(text: pokemon.enName)
+                    self?.pokemonView.setType(types: pokemon.type)
+                    self?.pokemonView.setHeight(height: pokemon.height)
+                    self?.pokemonView.setWeight(weight: pokemon.weight)
                 }
             case .failure(let error):
                 let a = 2

@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum PokemonType {
+enum PokemonType : String {
     case FIRE
     case WATER
     case GRASS
