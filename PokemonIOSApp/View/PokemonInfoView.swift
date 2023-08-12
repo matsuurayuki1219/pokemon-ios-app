@@ -82,7 +82,6 @@ class PokemonInfoView: UIView {
         contentLabel.sizeToFit()
         let x = titleLabel.frame.width + titleLabel.frame.origin.x
         contentLabel.frame = CGRect(x: x + 8, y: 0, width: frame.width - x - 8, height: frame.height)
-        contentLabel.backgroundColor = UIColor.dark
     }
 
 }

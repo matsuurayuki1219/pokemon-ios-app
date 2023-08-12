@@ -128,10 +128,12 @@ extension DetailViewController {
         }
 
         func setHeight(height: Int) {
+            let height = Float(height) * 0.1
             pokemonHeighteView.setContent(content: String(height) + " m")
         }
 
         func setWeight(weight: Int) {
+            let weight = Float(weight) * 0.1
             pokemonWeightView.setContent(content: String(weight) + " kg")
         }
 
