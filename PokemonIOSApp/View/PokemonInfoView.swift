@@ -13,6 +13,7 @@ class PokemonInfoView: UIView {
     private lazy var imageView = {
         let view = UIImageView()
         let image = UIImage(systemName: "face.smiling.fill")
+    
         view.image = image
         return view
     }()
@@ -50,7 +51,7 @@ class PokemonInfoView: UIView {
     private func layoutParentView(width: CGFloat, height: CGFloat) {
         layer.cornerRadius = height / 2
         layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner]
-        backgroundColor = UIColor.dragon
+        backgroundColor = UIColor.white
     }
 
 
